@@ -40,7 +40,6 @@ dispatcher.add_handler(heil_handler)
 class PatriciaFilter(BaseFilter):
 	def filter(self, message):
 		return ('Patri' in message.text or 'patri' in message.text or 'patricia' in message.text or 'Patri' in message.text)
-# Init
 patricia_filter = PatriciaFilter()
 
 def patricia_func(bot, update):
@@ -48,6 +47,10 @@ def patricia_func(bot, update):
 
 patricia_handler = MessageHandler(patricia_filter, patricia_func)
 dispatcher.add_handler(patricia_handler)
+
+### Bon dia...(?)
+
+
 ### Run bot
 
 updater.start_polling()
